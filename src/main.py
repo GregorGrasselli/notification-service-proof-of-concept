@@ -58,6 +58,9 @@ class WebsocketConnector:
 
 async def send_messages() -> None:
     while True:
+        # We would listen for db changes here, and take appropriate
+        # action when they happen. This is just here, so we can check
+        # that the client gets the messages
         time.sleep(random.randint(1, 10))
         number = random.randint(1, 100)
         print('sending number', number)
